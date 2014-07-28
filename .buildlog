@@ -30,3 +30,8 @@ build.dart --machine --changed=pubspec.lock
 
 build.dart finished [1486 ms]
 
+---
+build.dart --machine --changed=LICENSE --changed=README.md
+
+build.dart finished [1048 ms]
+
