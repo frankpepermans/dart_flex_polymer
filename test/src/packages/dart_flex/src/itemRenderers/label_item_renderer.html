@@ -1,0 +1,16 @@
+<link rel="import" href="../../../../packages/polymer/polymer.html">
+<link rel="import" href="../components/rich_text.html">
+<polymer-element name="flex-label-item-renderer">
+  <template>
+    <style>
+      ._item-renderer-label {
+        font-size: 13px;
+        padding-left: 5px;
+        padding-top: 8px;
+        text-decoration: inherit;
+      }
+    </style>
+    <flex-text id="control" class="item-renderer-label" percentWidth="100.0" autoSize="true"></flex-text>
+  </template>
+  <script type="application/dart" src="label_item_renderer.dart"></script>
+</polymer-element>

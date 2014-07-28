@@ -1,0 +1,34 @@
+<link rel="import" href="../../../../packages/polymer/polymer.html">
+<polymer-element name="flex-button">
+  <template>
+    <style>
+      ._Button {
+        outline: none;
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e8effa), color-stop(1, #cad9ed) );
+        background:-moz-linear-gradient( center top, #e8effa 5%, #cad9ed 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8effa', endColorstr='#cad9ed');
+        background-color:#e8effa;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-left: 1px solid #a8b7cb;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+        display:inline-block;
+        color:#606060;
+        font-family: inherit;
+        font-size:13px;
+        font-weight:bold;
+        padding:6px 6px;
+        text-decoration:none;
+        text-shadow:1px 1px 0px #ffffff;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+    </style>
+    <button id="control"></button>
+  </template>
+  <script type="application/dart" src="button.dart"></script>
+</polymer-element>

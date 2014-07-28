@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<fx:Skin xmlns:fx="library://dart_flex">
+  <fx:VGroup id="verticalContainer" width="100%" height="100%">
+    <fx:Group height="100"/>
+    <fx:HGroup id="horizontalContainer" width="100%" height="100%">
+      <fx:Group width="100"/>
+      <fx:HGroup id="centerContainer" cssClasses="['main-panel']" paddingBottom="15" width="100%" height="100%">
+        <fx:DataGrid 
+          id="dataGrid"
+          cssClasses="[]"
+          percentWidth="{centerContainer.percentWidth}" height="100%"
+          headerHeight="30"
+          rowHeight="34"
+          columnSpacing="0" rowSpacing="0"
+          columns="createColumns()"
+          dataProvider="createDataProvider()"
+          sortHandler="dataGrid_sortHandler" />
+        <fx:Accordion 
+          id="accordion"
+          width="100%" height="100%"
+          dataProvider="createAccordionDataProvider()"
+          headerItemRendererFactory="new ItemRendererFactory&lt;IAccordionHeaderItemRenderer&gt;(constructorMethod: AccordionHeaderItemRenderer.construct)"
+          headerHeight="30"
+          headerFields="[taskSymbol]"
+          headerField="taskNameSymbol"
+          contentItemRendererFactory="new ItemRendererFactory(constructorMethod: SpriteSheetItemRenderer.construct)"
+          contentFields="[urgencySymbol]"
+          contentField="urgencyNameSymbol" />
+        <fx:VGroup id="masterTables" width="200" height="100%">
+          <fx:Image 
+            id="editTasksImage"
+            width="200" height="50"
+            source="'images/edit_tasks.jpg'" />
+          <fx:ListRenderer
+            id="tasksGrid"
+            width="100%" height="100%"
+            rowHeight="34"
+            rowSpacing="0"
+            field="taskNameSymbol"
+            itemRendererFactory="new ItemRendererFactory(constructorMethod: EditableLabelItemRenderer.construct)"
+            dataProvider="taskNames" />
+          <fx:Image 
+            id="editUrgenciesImage"
+            width="200" height="50"
+            source="'images/edit_urgencies.jpg'" />
+          <fx:ListRenderer
+            id="urgenciesGrid"
+            paddingBottom="30"
+            cssClasses="[]"
+            width="100%" height="100%"
+            rowHeight="34"
+            rowSpacing="0"
+            field="urgencyNameSymbol"
+            itemRendererFactory="new ItemRendererFactory(constructorMethod: EditableLabelItemRenderer.construct)"
+            dataProvider="urgencyNames" />
+        </fx:VGroup>
+        <fx:Group width="8"/>
+      </fx:HGroup>
+      <fx:Group width="100"/>
+    </fx:HGroup>
+    <fx:Group height="100"/>
+  </fx:VGroup>
+</fx:Skin>

@@ -1,0 +1,26 @@
+<link rel="import" href="../../../../packages/polymer/polymer.html">
+<link rel="import" href="group.html">
+<polymer-element name="flex-list-renderer">
+  <template>
+    <style>
+      ._ListRenderer {
+                box-sizing:border-box;
+           -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        border: 1px solid #aaa;
+        background-color: #fff;
+      }
+      
+      ._ListScrollTarget {
+        position: absolute;
+      }
+      
+      .ItemRenderer-selected {
+        color: #ff9900;
+      }
+    </style>
+    <flex-group id="scrollTarget" class="_ListScrollTarget" autoSize="false" includeInLayout="false"></flex-group>
+    <div id="control"></div>
+  </template>
+  <script type="application/dart" src="list_renderer.dart"></script>
+</polymer-element>

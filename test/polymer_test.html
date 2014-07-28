@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample app</title>
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+    <!-- import the click-counter -->
+    <link rel="import" href="packages/polymer/polymer.html">
+    <link rel="import" href="../lib/src/components/hgroup.html">
+    <link rel="import" href="../lib/src/components/button.html">
+    <link rel="import" href="../lib/src/components/list_renderer.html">
+    <link rel="import" href="../lib/src/itemRenderers/label_item_renderer.html">
+    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    <script src="packages/browser/dart.js"></script>
+    
+    <link rel="stylesheet" href="polymer_test.css">
+  </head>
+  <body>
+    <flex-hgroup percentWidth="100.0" height="500">
+      <flex-list-renderer rowHeight="60" rowSpacing="0" percentWidth="100.0" percentHeight="100.0" 
+        dataProvider="[{'name':'Paul'},{'name':'John'},{'name':'Cath'},{'name':'Alex'},{'name':'Laila'},{'name':'Stephen'},{'name':'Dwight'},{'name':'Jeff'},{'name':'Steve'},{'name':'Anna'},{'name':'Michelle'},{'name':'Anthony'},{'name':'Roy'},{'name':'Peter'},{'name':'Alan'},{'name':'Ian'},{'name':'Frank'},{'name':'Bert'},{'name':'Julia'},{'name':'Everett'}]">
+        <template>
+          <flex-label-item-renderer data="{{entry}}"></flex-label-item-renderer>
+        </template>
+      </flex-list-renderer>
+      <flex-button percentWidth="100.0" percentHeight="100.0" label="button a"></flex-button>
+      <flex-button percentWidth="100.0" percentHeight="100.0" label="button b"></flex-button>
+      <flex-button percentWidth="100.0" percentHeight="100.0" label="button c"></flex-button>
+    </flex-hgroup>
+  </body>
+</html>

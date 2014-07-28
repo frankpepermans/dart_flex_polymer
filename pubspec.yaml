@@ -1,0 +1,14 @@
+name: dart_flex
+version: 0.8.28
+author: Frank Pepermans <frank@igindo.com>
+description: Flex-like components in Dart
+homepage: https://github.com/frankpepermans/dart_flex
+dependencies:
+  barback: any
+  browser: any
+  observe: any
+  polymer: any
+  xml: any
+transformers:
+- polymer:
+    entry_points: test/polymer_test.html
